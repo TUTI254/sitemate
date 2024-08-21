@@ -7,6 +7,10 @@ TECH STACK
 - Mongo db
 
 ## Setup Instructions
+create a .env file in the server directory and add the following variables
+
+`DB_URI=<your mongodb uri>`
+`PORT=<your port>`
 
 * After navigating to the server directory, run the following command:
 `pnpm install`
@@ -24,6 +28,9 @@ TECH STACK
 
 ## Setup Instructions
 
+create a .env file in the client directory and add the following variables
+
+`VITE_API_URL=<your api url>`
 
 * After navigating to the Client directory, run the following command:
 `pnpm install`
