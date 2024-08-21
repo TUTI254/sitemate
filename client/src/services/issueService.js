@@ -18,13 +18,12 @@ export const getIssues = async () => {
 };
 
 // Update Issue
-export const updateIssue = async (id, issue) => {
-  const parsedIssue = IssueSchema.parse(issue);
-  const response = await axios.put(`${API_URL}/${id}`, parsedIssue);
+export const updateIssue = async (_id, issueData) => {
+  const response = await axios.put(`${API_URL}/${_id}`, issueData);
   return response.data;
 };
 
 // Delete Issue
-export const deleteIssue = async (id) => {
-  await axios.delete(`${API_URL}/${id}`);
+export const deleteIssue = async (_id) => {
+  await axios.delete(`${API_URL}/${_id}`);
 };
