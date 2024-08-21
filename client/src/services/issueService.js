@@ -1,13 +1,5 @@
 import axios from 'axios';
-import { z } from 'zod';
-
-
-// Zod schema for issue validation
-const IssueSchema = z.object({
-  id: z.number().positive(),
-  title: z.string().min(1, "Title is required"),
-  description: z.string().min(1, "Description is required"),
-});
+import IssueSchema from '../utils/IssueSchema.js';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
